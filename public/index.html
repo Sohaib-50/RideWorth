@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RideWorth</title>
+    <link rel="stylesheet" href="/styles.css?v=4" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+  </head>
+  <body>
+    <main>
+      <header>
+        <p class="eyebrow">Karachi ride check</p>
+        <h1>RideWorth</h1>
+        <p class="lede">
+          Paste the offer, or say it. See if the petrol is worth your time.
+        </p>
+      </header>
+
+      <form id="offer-form">
+        <div class="offer-head">
+          <label for="offer">Ride offer</label>
+          <button id="mic" type="button">Say the offer</button>
+        </div>
+        <textarea id="offer" name="offer" rows="5">I'm in Gulshan-e-Iqbal. Pickup from DHA Phase 6, drop at Jinnah International Airport. Fare 450.</textarea>
+
+        <label class="vehicle">
+          Vehicle
+          <select id="vehicle" name="vehicle">
+            <option value="bike" selected>Bike · 40 km/L</option>
+            <option value="rickshaw">Rickshaw · 25 km/L</option>
+            <option value="alto">Suzuki Alto · 18 km/L</option>
+            <option value="mehran">Suzuki Mehran · 14 km/L</option>
+            <option value="city">Honda City · 13 km/L</option>
+            <option value="corolla">Toyota Corolla · 12 km/L</option>
+          </select>
+        </label>
+
+        <div class="actions">
+          <button id="check" type="submit">How's This Offer?</button>
+        </div>
+        <p id="status" class="status" role="status"></p>
+      </form>
+
+      <section id="result" class="result" hidden></section>
+    </main>
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="/app.js?v=6" type="module"></script>
+  </body>
+</html>

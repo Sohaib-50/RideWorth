@@ -1,0 +1,3 @@
+# Hosted Gemma for offer extraction
+
+RideWorth has to interpret a plain-language ride offer, and the Week 2 challenge requires an open-weight model, an open-source agent harness, or local inference. Local is one of those options, not the only one. This PC is weak, and a judge has to click through a demo, so the model runs as Gemma 4 (`gemma-4-26b-a4b-it`) on the Gemini API with thinking set to minimal. Gemma also writes the English offer note. Fare, fuel, wear, and the verdict stay in application code. The provider sits behind one module and `GEMINI_API_KEY` / `GEMMA_MODEL`. Offer text leaves the machine; that assumption is shown in the UI. The same open weights can move to another host later.
